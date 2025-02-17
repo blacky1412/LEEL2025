@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% block content %}
+  <h1>Resultados</h1>
+  <p><strong>Tu sexo:</strong> {{ mi_sexo }}</p>
+  <p><strong>Tu decisión:</strong> {{ mi_decision }}</p>
+  <p><strong>Tu pago:</strong> S/{{ mi_pago }}</p>
+  <hr>
+  <p><strong>Decisión de tu oponente:</strong> {{ otro_decision }}</p>
+  <p><strong>Pago de tu oponente:</strong> S/{{ otro_pago }}</p>
+  <hr>
+  <p><strong>Porcentaje estimado para ESPERAR:</strong> {{ porcentaje_esperar }}%</p>
+  <p><strong>Porcentaje estimado para EMBOSCAR:</strong> {{ porcentaje_emboscar }}%</p>
+{% endblock %}

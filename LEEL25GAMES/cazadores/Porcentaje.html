@@ -1,0 +1,9 @@
+{% extends "global/Page.html" %}
+{% block content %}
+  <h1>Predicción</h1>
+  <p>Considerando a todos los participantes, ¿qué porcentaje (%) crees que elegirá <strong>ESPERAR</strong>?</p>
+  <form method="post">
+    {% formfields %}
+    <button type="submit">Confirmar</button>
+  </form>
+{% endblock %}

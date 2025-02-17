@@ -1,0 +1,84 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <style>
+        /* Centramos el título */
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Ajuste del contenido del consentimiento */
+        .consentimiento-texto {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto; /* Centrar el contenido */
+        }
+
+        /* Negritas para los puntos importantes */
+        .resaltado {
+            font-weight: bold;
+        }
+
+        /* Contenedor para centrar pregunta y opciones */
+        .consentimiento-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra el contenido horizontalmente */
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Ajuste de los radio buttons */
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los elementos */
+            gap: 10px; /* Espaciado entre opciones */
+        }
+
+        /* Centrar el botón */
+        .boton-continuar {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+    <h2>Consentimiento Informado</h2>
+
+    <div class="consentimiento-texto">
+        <p>El propósito de este documento es proveerle una clara explicación de la naturaleza de esta investigación, así como el rol que cumplirá dentro de la misma y datos relevantes para su decisión.</p>
+
+        <p>La presente investigación forma parte del <span class="resaltado">Taller de Programación en Economía Experimental</span> edición 2025, organizado por el Laboratorio de Economía Experimental de Lima (LEEL).</p>
+
+        <p>Esta investigación explora la toma de decisiones en distintas condiciones. Si usted accede a participar en este estudio, se le pedirá completar tareas experimentales. Esto tomará aproximadamente <span class="resaltado">10 minutos</span> de su tiempo.</p>
+
+        <p><span class="resaltado">Por su participación, recibirá una compensación:</span> Este pago depende de sus decisiones y de los resultados en las tareas experimentales del primer y segundo experimento. Se llevará acabo un sorteo aleatorio entre los participantes, para recibir la compensación. En total, el pago que podría recibir fluctúa entre <span class="resaltado">0 y 14 soles</span>.</p>
+
+        <p><span class="resaltado">Si usted no acepta este consentimiento o no termina la sesión completa, no recibirá pago alguno.</span></p>
+
+        <p>Si usted tiene alguna consulta sobre este proyecto, sobre sus derechos como participante en la investigación o quisiera obtener información adicional, puede escribir un correo electrónico a la siguiente dirección: <span class="resaltado">leel.peru@gmail.com</span>.</p>
+    </div>
+
+    <!-- Sección de Pregunta y Respuestas centrada -->
+    <div class="consentimiento-form">
+        <p class="pregunta"></p>
+        <div class="radio-container">
+            {{ formfields }}  <!-- Esto ahora está centrado -->
+        </div>
+    </div>
+
+    <div class="boton-continuar">
+        {{ next_button }}
+    </div>
+
+{% endblock %}

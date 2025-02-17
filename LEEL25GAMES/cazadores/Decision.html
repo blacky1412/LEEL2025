@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% block content %}
+  <h1>Decisión</h1>
+  <p>El sexo de tu oponente es: {{ sexo_oponente }}</p>
+  <p>Selecciona tu estrategia:</p>
+  <ul>
+    <li><strong>EMBOSCAR:</strong> Intenta capturar el objetivo de manera sorpresiva.</li>
+    <li><strong>ESPERAR:</strong> Intenta capturar el objetivo de manera segura.</li>
+  </ul>
+  <form method="post">
+    {% formfields %}
+    <button type="submit">Confirmar estrategia</button>
+  </form>
+{% endblock %}

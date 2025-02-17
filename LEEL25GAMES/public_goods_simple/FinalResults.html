@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Resultados Finales
+{% endblock %}
+
+{% block content %}
+    <h2>Resumen de tu Participación</h2>
+
+    <p>A lo largo de las 4 rondas del experimento, has recibido pagos basados en tus decisiones y las de tu grupo.</p>
+
+    <p><strong>Tu pago total acumulado es:</strong> {{ total_payoff }} .</p>
+
+    <p>¡Gracias por participar en este experimento!</p>
+
+    {{ next_button }}
+{% endblock %}

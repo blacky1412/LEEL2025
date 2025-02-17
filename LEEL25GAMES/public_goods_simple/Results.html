@@ -1,0 +1,14 @@
+{{ block title }}Resultados{{ endblock }}
+{{ block content }}
+
+    <p>
+        Usted empezó con {{ C.ENDOWMENT }},
+        de los cuales contribuyó con {{ player.contribution }}.
+        Su grupo contribuyó {{ group.total_contribution }},
+        resultando en una porción individual de {{ group.individual_share }}.
+        Por lo que su resultado final es de {{ player.payoff }}.
+    </p>
+
+    {{ next_button }}
+
+{{ endblock }}

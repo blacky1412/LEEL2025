@@ -1,0 +1,17 @@
+{{ extends "global/Page.html" }}
+{{ block title }}Contribución{{ endblock }}
+{{ block content }}
+
+    <p>
+        Este es un juego de bienes públicos con
+        {{ C.PLAYERS_PER_GROUP }} jugadores por grupo,
+        una dotación de {{ C.ENDOWMENT }},
+        y un factor de eficiencia de {{ C.MULTIPLIER }}.
+    </p>
+
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}
